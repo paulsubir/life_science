@@ -1,0 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['uid'])){
+	header('location:adlogin.php');
+}
+else{
+    session_destroy();
+    header('location:adlogin.php');
+}
+?>
